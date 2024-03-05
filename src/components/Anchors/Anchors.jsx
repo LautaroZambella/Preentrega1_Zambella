@@ -1,11 +1,10 @@
-import  "./Anchors.module.css"
+import classes from "./Anchors.module.css"
 
 
-const Anchors = (links) => {
-    console.log(links)
+const Anchors = ({link, text, className}) => {
     return (
         <>
-            <a  className={links.clase} href={links.link} target="_blank">{links.text}</a>
+            <a className={`${classes.hola} ${className}`} href={link} target="_blank">{text}</a>
         </>
     )
 }

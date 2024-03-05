@@ -17,14 +17,14 @@
     align-items: center;
     gap: 10px;
 }
-.hola {
+
+.primaryButton {
     color: gold;
-}
-
-.adios {
-    color: red;
-}
-
-.mesa {
-    color: green;
-}
+    text-decoration: none;
+  }
+  
+  .secondaryButton {
+    color: gray;
+    font-size: 40px;
+    text-decoration: none;
+  }
