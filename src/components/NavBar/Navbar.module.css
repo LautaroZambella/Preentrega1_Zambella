@@ -3,6 +3,7 @@
     background-color: #35374B;
     margin: 0;
     padding: 10px;
+    justify-content: space-between;
 }
 
 .titulo {
@@ -20,11 +21,13 @@
 
 .primaryButton {
     color: gold;
-    text-decoration: none;
   }
   
   .secondaryButton {
     color: gray;
-    font-size: 40px;
-    text-decoration: none;
+    
+  }
+
+  .terciaryButton {
+    color: green;
   }

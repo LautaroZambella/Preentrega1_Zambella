@@ -3,7 +3,7 @@ import classes from "./CartWidget.module.css"
 
 const CartWidget = ()=> {
     return (
-        <div>
+        <div className={`${classes.carrito}`}>
             <img src= {carrito} alt="Carrito" />
             0
         </div>

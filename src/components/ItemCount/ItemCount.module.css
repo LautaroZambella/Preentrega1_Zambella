@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+.twoButtons{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    
+}
+.buttonsModify {
+    padding: 16px;
+    background-color: violet;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.addToCart{
+    border: none;
+    background-color: violet;
+    padding: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}

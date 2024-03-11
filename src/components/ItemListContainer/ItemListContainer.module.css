@@ -1,3 +1,11 @@
 .mensaje {
     color: #50727B;
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}

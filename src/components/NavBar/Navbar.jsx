@@ -16,7 +16,7 @@ const Navbar = () => {
                 <Anchors   className={classes.secondaryButton} text ="SILLONES" link="https://www.google.com/search?q=sillones&tbm=isch&ved=2ahUKEwjg8Y_H5saEAxV8W7gEHXZtDeoQ2-cCegQIABAA&oq=sillones&gs_lp=EgNpbWciCHNpbGxvbmVzMgQQIxgnMg
                 QQIxgnMg0QABiABBiKBRhDGLEDMgoQABiABBiKBRhDMgoQABiABBiKBRhDMgoQABiABBiKBRhDMgoQABiABBiKBRhDMgoQABiABBiKBRhDMgUQABiABDIFEAAYgARIzhFQrwZYtBBwAHgAkAEAmAHcAaAB_QaqAQU4LjAuMbgBA8gBAPgBAYoCC2d
                 3cy13aXotaW1niAYB&sclient=img&ei=BVzbZaDbIvy24dUP9tq10A4&bih=953&biw=1920&hl=es-419"></Anchors>
-                <Anchors   text ="PUFS" link="https://www.google.com/search?q=pufs&tbm=isch&ved=2ahUKEwiJ-K_W5saEAxW8WLgEHRegBGgQ2-cCegQIABAA&oq=pufs&gs_lp=EgNpbWciBHB1ZnMyBRA
+                <Anchors   className={classes.terciaryButton} text ="PUFS" link="https://www.google.com/search?q=pufs&tbm=isch&ved=2ahUKEwiJ-K_W5saEAxW8WLgEHRegBGgQ2-cCegQIABAA&oq=pufs&gs_lp=EgNpbWciBHB1ZnMyBRA
                 AGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAESLwOUIUHWL4NcAB4AJABAJgBV6ABmgOqAQE1uAEDyAEA-AEBigILZ3dzLXdpei1pbWfCAgQQIxgnwgIKEAAYgAQY
                 igUYQ8ICCBAAGIAEGLEDiAYB&sclient=img&ei=JVzbZcnRIbyx4dUPl8CSwAY&bih=953&biw=1920&hl=es-419"></Anchors>
             </nav>
