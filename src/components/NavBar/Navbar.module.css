@@ -10,6 +10,9 @@
     display: flex;
     justify-content: flex-start;
     color: red;
+    font-size: 30px;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .Navbar {
@@ -19,15 +22,30 @@
     gap: 10px;
 }
 
-.primaryButton {
+.silla {
     color: gold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 22px;
   }
   
-  .secondaryButton {
+  .sillon {
     color: gray;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 22px;
     
   }
 
-  .terciaryButton {
+  .pufs {
     color: green;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 22px;
   }

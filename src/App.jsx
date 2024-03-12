@@ -1,18 +1,23 @@
 import Navbar from "./components/NavBar/Navbar"
-// import Button from './components/Button/Button'
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
-import ItemCount from "./components/ItemCount/ItemCount"
 import ItemDetailContainer from "./components/ItemDetailcontainer/ItemDetailContainer"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Footer from "./components/Footer/Footer"
 import './App.css'
 
 function App() {
 
   return (
     <>
-      <Navbar />
-      <ItemListContainer  salud="¡Bienvenido a Sofa Studio!" />
-      {/* <ItemCount initial = {1} stock = {10} onAdd = {(quantity) => console.log("cantidad agregada ", quantity)} /> */}
-      <ItemDetailContainer />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element = {<ItemListContainer  salud="¡Bienvenido a Sofa Studio!" />} />
+          <Route path="/category/:categoryId" element= {<ItemListContainer  salud="¡Bienvenido a Sofa Studio!" />}/>
+          <Route path ="/item/:itemId" element ={<ItemDetailContainer />} />
+        </Routes>
+      </BrowserRouter>
+        <Footer />
     </>
   )
 }

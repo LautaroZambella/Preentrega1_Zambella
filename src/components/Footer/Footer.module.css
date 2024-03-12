@@ -1,0 +1,36 @@
+.container {
+    background-color: #50727B;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container img {
+    width: 300px;
+    border-radius: 20px;
+    animation-name: leftAndRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}
+
+.personal {
+    color: coral;
+    font-size: 30px;
+}
+
+@keyframes leftAndRight {
+    0% {
+      transform: translatex(0px);
+    }
+    50% {
+      transform: translatex(-100px);
+    }
+    100% {
+      transform: translatex(0px);
+    }
+  }

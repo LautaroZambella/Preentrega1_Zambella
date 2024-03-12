@@ -32,7 +32,7 @@ const products = [
     { 
         id: '6', 
         name: 'Puf rojo', 
-        price: 1000, 
+        price: 10, 
         category: 'pufs', 
         img:'https://www.debois.com.ar/images/stories/virtuemart/category/puff%20de%20colores.jpg', 
         stock: 10, 

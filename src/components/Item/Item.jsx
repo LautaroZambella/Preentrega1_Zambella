@@ -1,5 +1,6 @@
 import classes from "./Item.module.css"
 import Anchors from "../Anchors/Anchors"
+import { Link } from "react-router-dom"
 
 const Item = ({id, name, img, price}) => {
     return (
@@ -7,7 +8,7 @@ const Item = ({id, name, img, price}) => {
             <img className={`${classes.imagen}`} src={img}/>
             <h2>{name}</h2>
             <h3>{price}</h3>
-            <Anchors  text ="ver detalle" link="/"/>
+            <Link className={`${classes.detalle}`} to ={`/item/${id}`}>Ver detalle</Link>
         </div>
     )
 }
