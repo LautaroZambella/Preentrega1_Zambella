@@ -1,12 +1,9 @@
 import CartWidget from "../CartWidget/CartWidget"
-import Anchors from "../Anchors/Anchors"
 import classes from "./Navbar.module.css"
 import { Link } from "react-router-dom"
 
 
 const Navbar = () => {
-    console.log(classes)
-    console.log(classes.primero)
     return (
         <>
         <header className= {classes.header} >

@@ -1,5 +1,4 @@
 import classes from "./Item.module.css"
-import Anchors from "../Anchors/Anchors"
 import { Link } from "react-router-dom"
 
 const Item = ({id, name, img, price}) => {
