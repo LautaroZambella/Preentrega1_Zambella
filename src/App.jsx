@@ -11,27 +11,27 @@ import './App.css'
 
   
 
-    function App() {
+  function App() {
     
 
 
-  return (
-    <>
-      <CartProvider>
-        <BrowserRouter>
-          <Navbar />
-          <Routes>
-            <Route path="/" element = {<ItemListContainer  salud="¡Bienvenido a Sofa Studio!" />} />
-            <Route path="/category/:categoryId" element= {<ItemListContainer  salud="¡Bienvenido a Sofa Studio!" />}/>
-            <Route path ="/item/:itemId" element ={<ItemDetailContainer />} />
-            <Route path ="/cart" element ={<Cart/>} />
-            <Route path ="/checkout" element ={<Checkout/>} />
-          </Routes>
-        </BrowserRouter>
-        </CartProvider>
-      <Footer />
-    </>
-  )
-}
+    return (
+      <>
+        <CartProvider>
+          <BrowserRouter>
+            <Navbar />
+            <Routes>
+              <Route path="/" element = {<ItemListContainer  salud="¡Bienvenido a Sofa Studio!" />} />
+              <Route path="/category/:categoryId" element= {<ItemListContainer  salud="¡Bienvenido a Sofa Studio!" />}/>
+              <Route path ="/item/:itemId" element ={<ItemDetailContainer />} />
+              <Route path ="/cart" element ={<Cart/>} />
+              <Route path ="/checkout" element ={<Checkout/>} />
+            </Routes>
+          </BrowserRouter>
+          </CartProvider>
+        <Footer />
+      </>
+    )
+  }
 
 export default App

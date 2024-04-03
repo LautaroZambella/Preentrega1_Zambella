@@ -1,10 +1,16 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { CartContext } from "../CartContext/CartContext"
 import {query, where, collection, documentId, getDocs, writeBatch, addDoc} from "firebase/firestore"
 import {db} from "../../services/firebase/firebaseConfig.js"
 const Checkout = () => {
 
+    
     const {cart} = useContext(CartContext)
+    
+    const [nombre, setNombre] = useState(" ")
+    const [apellido, setApellido] = useState(" ")
+    const [correo, setCorreo] = useState(" ")
+
 
     const totalPriceCalculator = (cart) => {
         let contador = 0
@@ -21,7 +27,7 @@ const Checkout = () => {
 
         try {
             const objOrder = {
-                buyer: { nombre: "Jorge"},
+                buyer: userInfo,
                 items: cart,
                 totalPrice
             }
@@ -70,11 +76,25 @@ const Checkout = () => {
         
     }
 
+    const handleOnSubit = (e) => {
+        e.preventDefault()
+        generateOrder({nombre, apellido, correo})
+        setNombre  ("")
+        setApellido("")
+        setCorreo("")
+        console.log ({nombre, apellido, correo})
+    }
+
     return (
         <div>
             <h1>HOLA</h1>
             <h3>HCAER EL FORMS</h3>
-            <button onClick={generateOrder}>GENERATE ORDEN</button>
+            <form onSubmit={handleOnSubit}>
+                <input type="text" placeholder="Ingrese su nombre" name="nombre" value={nombre} onChange={(e) => setNombre(e.target.value)}/>
+                <input type="text" placeholder="Ingrese su apellido" name="apellido" value={apellido} onChange={(e) => setApellido(e.target.value)}/>
+                <input type="text" placeholder="Ingrese su mail" name="correo" value={correo} onChange={(e) => setCorreo(e.target.value)}/>
+                <button type ="submit" >GENERATE ORDEN</button>
+            </form>
         </div>       
     )
 }
