@@ -5,6 +5,7 @@ import Cart from "./components/Cart/Cart"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import {CartProvider} from "./components/CartContext/CartContext"
 import Footer from "./components/Footer/Footer"
+import Checkout from "./components/Checkout/Checkout"
 import './App.css'
 
 
@@ -24,6 +25,7 @@ import './App.css'
             <Route path="/category/:categoryId" element= {<ItemListContainer  salud="¡Bienvenido a Sofa Studio!" />}/>
             <Route path ="/item/:itemId" element ={<ItemDetailContainer />} />
             <Route path ="/cart" element ={<Cart/>} />
+            <Route path ="/checkout" element ={<Checkout/>} />
           </Routes>
         </BrowserRouter>
         </CartProvider>
