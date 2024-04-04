@@ -6,12 +6,12 @@ import {getFirestore} from "firebase/firestore"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBd5qa0xSGDE1L-cr8xjve4fYyrCbkVRmw",
-  authDomain: "sofastudio-2610e.firebaseapp.com",
-  projectId: "sofastudio-2610e",
-  storageBucket: "sofastudio-2610e.appspot.com",
-  messagingSenderId: "119400555607",
-  appId: "1:119400555607:web:be1c32cf9664d392b52f12"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId ,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase

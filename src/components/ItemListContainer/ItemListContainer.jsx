@@ -25,18 +25,9 @@ const ItemListContainer = ({salud}) => {
                     }
                 })
                 setProducts(productsAdapted)
-                }).catch(
-                console.log("error")
-            )
-        // const ejecFunc = categoryId ? getProductsByCategory : getProducts
-
-        // ejecFunc(categoryId)
-        // .then(reslut => {
-        //     setProducts(reslut)
-        // })
-        // .catch(error => {
-        //     console.log(error)
-        // })
+                }).catch(error => {
+                    console.log(error)
+                })
     }, [categoryId])
     
     return (

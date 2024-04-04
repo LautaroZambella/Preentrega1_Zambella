@@ -8,6 +8,7 @@ const ItemDetail = ({id, name, img, category, description, price, stock}) => {
     const [quantity, setQuantity] = useState(0)
     const {añadirItem} = useContext(CartContext) 
     const {vaciarCarrito} = useContext(CartContext)
+    const {yaEsta} = useContext(CartContext)
 
     const bothFunctions = () => {
         vaciarCarrito()
@@ -39,7 +40,7 @@ const ItemDetail = ({id, name, img, category, description, price, stock}) => {
             </section>
             <footer>
                 {
-                    quantity > 0 ? (<Link className={`${classes.finalizar}`} to="/cart">Finalizar compra</Link>)
+                    yaEsta(id) ? (<Link className={`${classes.finalizar}`} to="/cart">Finalizar compra</Link>)
                     : (<ItemCount initial={1} stock = {stock} onAdd= {onAdd} />)
                 }
             </footer>
