@@ -7,9 +7,11 @@ const Checkout = () => {
     
     const {cart} = useContext(CartContext)
     
-    const [nombre, setNombre] = useState(" ")
-    const [apellido, setApellido] = useState(" ")
-    const [correo, setCorreo] = useState(" ")
+    const [nombre, setNombre] = useState("")
+    const [apellido, setApellido] = useState("")
+    const [correo, setCorreo] = useState("")
+    const [segundoCorreo, setsegundoCorreo] = useState("")
+    const [numero, setNumero] = useState (0)
 
 
     const totalPriceCalculator = (cart) => {
@@ -76,24 +78,64 @@ const Checkout = () => {
         
     }
 
-    const handleOnSubit = (e) => {
+    const validacionSingular = (correo) => { 
+        if (correo.indexOf("@") > -1) {
+            return true
+        }else {return false}
+
+    }
+
+    const validacionDoble = (correo1, correo2) => {
+        if (correo1 == correo2) {
+            return true
+        }else {return false}
+    }
+
+    const validacionNumero = (num) => {
+       if ((num > 0) && num.length == 10 ) {
+        return true
+       }else {return false}
+    }
+
+    const validacionStringvacio = (string) => {
+        if (string != "") {
+            return true
+        }else {return false}
+    }
+
+    const handleOnSubmit = (e) => {
         e.preventDefault()
-        generateOrder({nombre, apellido, correo})
+        if (validacionStringvacio(nombre) && validacionStringvacio(apellido) && validacionNumero(numero) && validacionSingular(segundoCorreo) && validacionSingular(correo) && validacionDoble(correo, segundoCorreo)) {
+            console.log("TODOS LOS DATOS ESTAN BIEN PA")
+            generateOrder({nombre, apellido, correo, numero})
+        } else {
+            console.log("revisa esos datos")
+        }
+
         setNombre  ("")
         setApellido("")
         setCorreo("")
-        console.log ({nombre, apellido, correo})
+        setsegundoCorreo("")
+        setNumero("")
+        console.log ({nombre, apellido, correo, numero})
     }
 
     return (
         <div>
             <h1>HOLA</h1>
             <h3>HCAER EL FORMS</h3>
-            <form onSubmit={handleOnSubit}>
-                <input type="text" placeholder="Ingrese su nombre" name="nombre" value={nombre} onChange={(e) => setNombre(e.target.value)}/>
-                <input type="text" placeholder="Ingrese su apellido" name="apellido" value={apellido} onChange={(e) => setApellido(e.target.value)}/>
-                <input type="text" placeholder="Ingrese su mail" name="correo" value={correo} onChange={(e) => setCorreo(e.target.value)}/>
-                <button type ="submit" >GENERATE ORDEN</button>
+            <form onSubmit={handleOnSubmit}>
+                <label >Ingrese su nombre</label>
+                <input type="text"  name="nombre" value={nombre} onChange={(e) => setNombre(e.target.value)}/>
+                <label >Ingrese su apellido</label>
+                <input type="text"  name="apellido" value={apellido} onChange={(e) => setApellido(e.target.value)}/>
+                <label >Ingrese su correo</label>
+                <input type="text"  name="correo" value={correo} onChange={(e) => setCorreo(e.target.value)}/>
+                <label >Repita su correo</label>
+                <input type="text"  name="correo" value={segundoCorreo} onChange={(e) => setsegundoCorreo(e.target.value)}/>
+                <label >Ingrese su numero</label>
+                <input type="number"  value={numero} onChange={(e) => setNumero(e.target.value)}/>
+                <button type ="submit" >Guardar datos</button>
             </form>
         </div>       
     )
