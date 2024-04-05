@@ -20,7 +20,8 @@ export const CartProvider = ({children}) => {
         return false
       }
     }
-      const vaciarCarrito = () => {
+    
+    const vaciarCarrito = () => {
         setCart([])
       }
 

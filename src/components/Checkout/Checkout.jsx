@@ -12,6 +12,7 @@ const Checkout = () => {
     const [correo, setCorreo] = useState("")
     const [segundoCorreo, setsegundoCorreo] = useState("")
     const [numero, setNumero] = useState (0)
+    const [orderNumber, setOrderNumber] = useState("")
 
 
     const totalPriceCalculator = (cart) => {
@@ -68,6 +69,7 @@ const Checkout = () => {
                 const orderCollection = collection(db, "orders")
                 const {id} = await addDoc(orderCollection, objOrder)
                 console.log(id)
+                setOrderNumber(id)
             } else {
                 console.log("No hay stock de algo")
             }
@@ -137,6 +139,7 @@ const Checkout = () => {
                 <input type="number"  value={numero} onChange={(e) => setNumero(e.target.value)}/>
                 <button type ="submit" >Guardar datos</button>
             </form>
+            <h4>El numero de orden de su compra es: {orderNumber}</h4>
         </div>       
     )
 }
