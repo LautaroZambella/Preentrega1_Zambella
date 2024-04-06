@@ -26,7 +26,7 @@ const ItemListContainer = ({salud}) => {
                 })
                 setProducts(productsAdapted)
                 }).catch(error => {
-                    console.log(error)
+                    
                 })
     }, [categoryId])
     

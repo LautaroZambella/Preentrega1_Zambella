@@ -26,7 +26,7 @@ const Checkout = () => {
       const totalPrice = totalPriceCalculator(cart)
 
     const generateOrder =  async (userInfo) => {
-        console.log("antes del try")
+        
 
         try {
             const objOrder = {
@@ -35,14 +35,14 @@ const Checkout = () => {
                 totalPrice
             }
 
-            console.log("recien adentro del try")
+           
             
-            console.log (cart)
+           
 
             const batch = writeBatch(db)
             const noStock = []
             const ids = cart.map(prod => prod.id)
-            console.log(ids)
+           
         
             const productsCollection = query(collection(db, "products"), where(documentId(), "in", ids ))
             
@@ -68,7 +68,7 @@ const Checkout = () => {
         
                 const orderCollection = collection(db, "orders")
                 const {id} = await addDoc(orderCollection, objOrder)
-                console.log(id)
+              
                 setOrderNumber(id)
             } else {
                 setOrderNumber("No hay stock de algo")
@@ -108,10 +108,10 @@ const Checkout = () => {
     const handleOnSubmit = (e) => {
         e.preventDefault()
         if (validacionStringvacio(nombre) && validacionStringvacio(apellido) && validacionNumero(numero) && validacionSingular(segundoCorreo) && validacionSingular(correo) && validacionDoble(correo, segundoCorreo)) {
-            console.log("TODOS LOS DATOS ESTAN BIEN PA")
+           
             generateOrder({nombre, apellido, correo, numero})
         } else {
-            console.log("revisa esos datos")
+          
         }
 
         setNombre  ("")
@@ -119,7 +119,7 @@ const Checkout = () => {
         setCorreo("")
         setsegundoCorreo("")
         setNumero("")
-        console.log ({nombre, apellido, correo, numero})
+        
     }
 
     return (

@@ -23,13 +23,6 @@ const ItemDetailContainer = () => {
                 setProduct(productAdapted)
             })
             .catch()
-        // getProductById(itemId)
-        // .then(response => {
-        //     setProduct(response)
-        // })
-        // .catch(error => {
-        //     console.log(error)
-        // })
     }, [itemId])
 
     return(

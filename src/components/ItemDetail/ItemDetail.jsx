@@ -13,7 +13,7 @@ const ItemDetail = ({id, name, img, category, description, price, stock}) => {
     const bothFunctions = () => {
         vaciarCarrito()
         setQuantity(0)
-        console.log("Se llamaron ambas funciones")
+        
     }
 
     const onAdd = (quantity) => {
