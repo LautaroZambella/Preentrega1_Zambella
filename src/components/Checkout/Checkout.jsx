@@ -71,11 +71,11 @@ const Checkout = () => {
                 console.log(id)
                 setOrderNumber(id)
             } else {
-                console.log("No hay stock de algo")
+                setOrderNumber("No hay stock de algo")
             }
 
         } catch(error) {
-            console.error("HUBO UN ERROR", error)
+            setOrderNumber("No hay stock de algo", error)
         }
         
     }
